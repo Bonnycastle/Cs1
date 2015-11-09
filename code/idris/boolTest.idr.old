@@ -1,0 +1,108 @@
+module boolTest
+
+import bool
+import pair
+
+-- andp
+andpT: bool
+andpT = (andp (mkPair true true))
+
+andpA: bool
+andpA = (andp (mkPair true false))
+
+andpC: bool
+andpC = (andp (mkPair false false))
+
+andpD: bool
+andpD = (andp (mkPair false true))
+
+-- orp
+orpT: bool
+orpT = (orp (mkPair true true))
+
+orpA: bool
+orpA = (orp (mkPair true false))
+
+orpB: bool
+orpB = (orp (mkPair false false))
+
+orpC: bool
+orpC = (orp (mkPair false true))
+
+-- nandp
+nandpT: bool
+nandpT = not (andp (mkPair true true))
+
+nandpA: bool
+nandpA = not (andp (mkPair true false))
+
+nandpB: bool
+nandpB = not (andp (mkPair false false))
+
+nandpC: bool
+nandpC = not (andp (mkPair false true))
+
+-- xorp
+xorpT: bool
+xorpT = (xorp (mkPair true true))
+
+xorpA: bool
+xorpA = (xorp (mkPair true false))
+
+xorpB: bool
+xorpB = (xorp (mkPair false false))
+
+xorpC: bool
+xorpC = (xorp (mkPair false true))
+
+-- pand
+pand_t_t: bool
+pand_t_t = pand true true
+
+pand_t_f: bool
+pand_t_f = pand true false
+
+pand_f_t: bool
+pand_f_t = pand false true
+
+pand_f_f: bool
+pand_f_f = pand false false
+
+-- por
+por_t_t: bool
+por_t_t = por true true
+
+por_t_f: bool
+por_t_f = por true false
+
+por_f_t: bool
+por_f_t = por false true
+
+por_f_f: bool
+por_f_f = por false false
+
+-- pxor
+pxor_t_t: bool
+pxor_t_t = pxor true true
+
+pxor_t_f: bool
+pxor_t_f = pxor true false
+
+pxor_f_t: bool
+pxor_f_t = pxor false true
+
+pxor_f_f: bool
+pxor_f_f = pxor false false
+
+-- pnand
+pnand_t_t: bool
+pnand_t_t = pnand true true
+
+pnand_t_f: bool
+pnand_t_f = pnand true false
+
+pnand_f_t: bool
+pnand_f_t = pnand false true
+
+pnand_f_f: bool
+pnand_f_f = pnand false false

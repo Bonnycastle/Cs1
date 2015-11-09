@@ -1,0 +1,47 @@
+module natTest
+
+import nat
+import bool
+import pair
+
+--exp
+expT: nat
+expT = exp (mkPair (O) (S (S O)))
+
+expA: nat
+expA = exp (mkPair (S O) (O))
+
+expB: nat
+expB = exp (mkPair (S (S (S O))) (S (S O)))
+
+--lep
+lepT: bool
+lepT = lep (mkPair (O) (S O))
+
+lepA: bool
+lepA = lep (mkPair (S O) (O))
+
+lepB: bool
+lepB = lep (mkPair O O)
+
+lepC: bool
+lepC = lep (mkPair (S (S (S O))) (S (S O)))
+
+lepD: bool
+lepD = lep (mkPair (S O) (S O))
+
+-- eqp
+eqpT: bool
+eqpT = eqp (mkPair O O)
+
+eqpA: bool
+eqpA = eqp (mkPair O (S O))
+
+eqpB: bool
+eqpB = eqp (mkPair (S O) O)
+
+eqpC: bool
+eqpC = eqp (mkPair (S O) (S (S O)))
+
+eqpD: bool
+eqpD = eqp (mkPair (S (S O)) (S (S O)))

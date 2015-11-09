@@ -1,0 +1,29 @@
+module friend
+
+import bool
+
+||| A friend is either trustworthy or not, who has a name and who has an
+||| age in years
+
+record friend where
+    constructor mkFriend
+    trustworthy : bool
+    name : String
+    age : Nat
+
+data friend = mkFriend bool String Nat
+
+f1: friend
+f1 = (mkFriend true "Chris" 18)
+
+f2: friend
+f2 = (mkFriend false "Joe" 25)
+
+getAge: friend -> Nat
+getAge (mkFriend bool String Nat) = Nat
+
+getName: friend -> String
+getName (mkFriend bool String Nat) -> String
+
+getTrust: friend -> bool
+getTrust (mkFriend bool String Nat) -> bool
