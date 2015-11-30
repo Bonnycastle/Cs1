@@ -97,6 +97,8 @@ menu = {
     110 : negative,  # n
     114 : reset,     # r
     108 : load,      # l
-    115 : save       # s
-    98  : bwconvert  # b
+    115 : save,       # s
+    98  : bwconvert,  # b
+    100 : darken,     # d
+    105  : light     # i
     }
